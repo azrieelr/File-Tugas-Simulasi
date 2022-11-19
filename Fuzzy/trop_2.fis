@@ -1,0 +1,57 @@
+[System]
+Name='trop_2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=16
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-2.5 2.5]
+NumMFs=4
+MF1='vs':'gaussmf',[0.708 -2.5]
+MF2='s':'gaussmf',[0.708 -0.8335]
+MF3='n':'gaussmf',[0.708 0.8335]
+MF4='f':'gaussmf',[0.708 2.5]
+
+[Input2]
+Name='input2'
+Range=[-2.5 2.5]
+NumMFs=4
+MF1='vs':'gaussmf',[0.708 -2.5]
+MF2='s':'gaussmf',[0.708 -0.8335]
+MF3='n':'gaussmf',[0.708 0.8335]
+MF4='f':'gaussmf',[0.708 2.5]
+
+[Output1]
+Name='output1'
+Range=[-2.5 2.5]
+NumMFs=4
+MF1='vs':'gaussmf',[0.708 -2.5]
+MF2='s':'gaussmf',[0.708 -0.8335]
+MF3='n':'gaussmf',[0.708 0.8335]
+MF4='f':'gaussmf',[0.71 2.5]
+
+[Rules]
+1 0, 1 (1) : 1
+1 0, 2 (1) : 1
+1 0, 3 (1) : 1
+2 0, 4 (1) : 1
+2 0, 1 (1) : 1
+2 0, 2 (1) : 1
+2 0, 3 (1) : 1
+2 0, 4 (1) : 1
+3 0, 1 (1) : 1
+3 0, 2 (1) : 1
+3 0, 3 (1) : 1
+4 0, 3 (1) : 1
+4 0, 1 (1) : 1
+4 0, 2 (1) : 1
+4 0, 3 (1) : 1
+4 0, 4 (1) : 1

@@ -1,0 +1,68 @@
+[System]
+Name='Sus'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[0 10]
+NumMFs=5
+MF1='k':'gbellmf',[1.282 7.424 0.0318]
+MF2='ks':'gaussmf',[1.062 2.5]
+MF3='m':'gaussmf',[1.062 5]
+MF4='bs':'gaussmf',[1.062 7.5]
+MF5='b':'gbellmf',[1.25 3.278 10.02]
+
+[Input2]
+Name='de'
+Range=[0 10]
+NumMFs=5
+MF1='k':'gbellmf',[1.25 3.278 0]
+MF2='ks':'gaussmf',[1.062 2.5]
+MF3='m':'gaussmf',[1.062 5]
+MF4='bs':'gaussmf',[1.062 7.5]
+MF5='b':'gbellmf',[1.25 3.278 9.979]
+
+[Output1]
+Name='output'
+Range=[0 10]
+NumMFs=4
+MF1='r':'gaussmf',[1.416 0]
+MF2='s':'gaussmf',[1.416 3.333]
+MF3='n':'gaussmf',[1.416 6.667]
+MF4='t':'gaussmf',[1.416 10]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 1 (1) : 1
+1 4, 1 (1) : 1
+1 5, 1 (1) : 1
+2 1, 1 (1) : 1
+2 2, 1 (1) : 1
+2 3, 1 (1) : 1
+2 4, 1 (1) : 1
+2 5, 2 (1) : 1
+3 1, 1 (1) : 1
+3 2, 1 (1) : 1
+3 3, 1 (1) : 1
+3 4, 2 (1) : 1
+3 5, 2 (1) : 1
+4 1, 1 (1) : 1
+4 2, 1 (1) : 1
+4 3, 2 (1) : 1
+4 4, 2 (1) : 1
+4 5, 3 (1) : 1
+5 1, 2 (1) : 1
+5 2, 2 (1) : 1
+5 3, 3 (1) : 1
+5 4, 4 (1) : 1
+5 5, 4 (1) : 1
